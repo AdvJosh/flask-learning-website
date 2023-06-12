@@ -11,15 +11,23 @@
         height: 360px;
         object-fit: cover;
         width: 100%;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://flask-learning-website.joshuamuth.repl.co/static/banner.jpg">
     <div class="container">
-      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-      <img class="img-fluid" id="banner" src="https://flask-learning-website.joshuamuth.repl.co/static/banner.jpg">
       <h2 class="text-center mt-2 mb-4">About {{company_name}}</h2>
-      <p class="lead">How much bandwidth do you have criticality , or low-hanging fruit, for this vendor is incompetent highlights bake it in strategic fit. Close the loop let's unpack that later. Fire up your browser quick sync radical candor we need distributors to evangelize the new line to local markets, so collaboration through advanced technlogy. It's a simple lift and shift job. Dog and pony show spinning our wheels draw a line in the sand. Shelfware nobody's fault it could have been managed better where the metal hits the meat big data. Deploy to production we need to future-proof this, yet ladder up / ladder back to the strategy, for curate both the angel on my left shoulder and the devil on my right are eager to go to the next board meeting and say weâ€™re ditching the business model.</p>
+      <div class="row mb-6">
+        <div class="col-md-6">
+          <p class="lead">How much bandwidth do you have criticality , or low-hanging fruit, for this vendor is incompetent highlights bake it in strategic fit. Close the loop let's unpack that later. Fire up your browser quick sync radical candor we need distributors to evangelize the new line to local markets, so collaboration through advanced technlogy. It's a simple lift and shift job. Dog and pony show spinning our wheels draw a line in the sand. Shelfware nobody's fault it could have been managed better where the metal hits the meat big data. Deploy to production we need to future-proof this, yet ladder up / ladder back to the strategy, for curate both the angel on my left shoulder and the devil on my right are eager to go to the next board meeting and say weâ€™re ditching the business model.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="/static/people.png" style="height:320px; border-radius:6px">
+        </div>
+      </div>
     <h2 class="text-center mt-2 mb-6">Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -27,9 +35,9 @@
       {% endfor %}
     </div>
     <div class="text-center mt-5">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023, Joshua</p>
+      <a href="mailto:admin@jmuth.com?subject=Question about job openings" type="button" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
   </div>
+    {% include 'footer.html' %}
   </body>
 </html>
